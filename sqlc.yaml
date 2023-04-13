@@ -1,0 +1,10 @@
+version: "2"
+sql:
+  - schema: "./schema.sql"
+    queries: "./repository/"
+    engine: "postgresql"
+    gen:
+      go:
+        package: "repository"
+        out: "./repository/"
+        output_models_file_name: "./models.go"
